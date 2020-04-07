@@ -55,7 +55,7 @@ const lessModuleRegex = /\.module\.less$/;
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function(webpackEnv) {
-  const isEnvDevelopment = webpackEnv === 'development';
+  const isEnvDevelopment = webpackEnv !== 'production';
   const isEnvProduction = webpackEnv === 'production';
 
   // Variable used for enabling profiling in Production
@@ -437,7 +437,7 @@ module.exports = function(webpackEnv) {
               exclude: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                sourceMap: isEnvProduction && shouldUseSourceMap,
+                sourceMap: true,
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -451,7 +451,7 @@ module.exports = function(webpackEnv) {
               test: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                sourceMap: isEnvProduction && shouldUseSourceMap,
+                sourceMap: true,
                 modules: {
                   getLocalIdent: getCSSModuleLocalIdent,
                 },
@@ -466,7 +466,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  sourceMap: true,
                 },
                 'sass-loader'
               ),
@@ -483,7 +483,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  sourceMap: true,
                   modules: {
                     getLocalIdent: getCSSModuleLocalIdent,
                   },
@@ -498,7 +498,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  sourceMap: true,
                 },
                 'less-loader'
               ),
@@ -509,7 +509,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  sourceMap: true,
                   modules: true,
                   // getLocalIdent: getCSSModuleLocalIdent,
                 },
