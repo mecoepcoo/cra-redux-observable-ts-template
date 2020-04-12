@@ -8,9 +8,11 @@
     "test": "node scripts/test.js"
   },
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
@@ -23,6 +25,7 @@
     "@types/node": "^12.12.34",
     "@types/react": "^16.9.32",
     "@types/react-dom": "^16.9.6",
+    "@types/react-router-dom": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "babel-eslint": "10.1.0",
