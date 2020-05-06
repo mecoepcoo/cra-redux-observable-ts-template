@@ -3,6 +3,8 @@ import { RootState } from '@/redux/root'
 import { useSelector, useDispatch } from 'react-redux'
 import { updateCounter } from '@/redux/modules/counter'
 
+import style from './index.module.less'
+
 const counterStep = 1
 
 // 组件函数名一定要大写
@@ -21,7 +23,7 @@ const CounterComponent: React.FC<any> = (props: any) => {
 
   return (
     <div className="App">
-      <h1>{count}</h1>
+      <h1 className={style.title}>{count}</h1>
       <button type="button" onClick={decrement}>
         -
       </button>

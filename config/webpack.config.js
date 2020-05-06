@@ -102,6 +102,28 @@ module.exports = function(webpackEnv) {
               },
               stage: 3,
             }),
+            require('postcss-aspect-ratio-mini')({}),
+            require('postcss-write-svg')({ utf8: false }),
+            require('postcss-px-to-viewport')({
+              unitToConvert: 'px',
+              viewportWidth: 375,
+              unitPrecision: 3,
+              viewportUnit: 'vmin',
+              fontViewportUnit: 'vmin',
+              selectorBlackList: ['.ignore', '.hairlines'],
+              minPixelValue: 1,
+              mediaQuery: false,
+              replace: true,
+              exclude: [],
+              landscape: false,
+              landscapeUnit: 'vmin',
+              landscapeWidth: 667
+            }),
+            require('cssnano')({
+              'cssnano-preset-advanced': {
+                zindex: false
+              }
+            }),
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
@@ -630,6 +652,10 @@ module.exports = function(webpackEnv) {
           };
         },
       }),
+      // As the loader generates typing files, it is wise to tell webpack to ignore them
+      new webpack.WatchIgnorePlugin([
+        /css\.d\.ts$/
+      ]),
       // Moment.js is an extremely popular library that bundles large locale files
       // by default due to how webpack interprets its code. This is a practical
       // solution that requires the user to opt into importing specific locales.
