@@ -22,7 +22,7 @@ const initialState = {
 }
 
 export interface ICounterState {
-  count: number
+  readonly count: number
 }
 
 export function counter(state = initialState, action: ModifyAction): ICounterState {

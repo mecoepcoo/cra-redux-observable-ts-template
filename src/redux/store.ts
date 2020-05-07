@@ -5,7 +5,7 @@ import { rootReducer, rootEpic } from './root'
 
 const epicMiddleware = createEpicMiddleware()
 
-const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const middlewares: any[] = [epicMiddleware]
 

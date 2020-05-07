@@ -8,5 +8,3 @@ export const rootReducer = combineReducers({
 })
 
 export const rootEpic = combineEpics(counterEpic)
-
-export type RootState = ReturnType<typeof rootReducer>
