@@ -1,8 +1,9 @@
 import React from 'react'
-import { RootState } from '@/types/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { updateCounter } from '@/redux/modules/counter'
-
+// types
+import { RootState } from '@/types/store'
+// styles
 import style from './index.module.less'
 
 const counterStep = 1
@@ -17,21 +18,21 @@ const CounterComponent: React.FC<Props> = (props: Props) => {
 
   const dispatch = useDispatch()
 
-  const decrement = () => {
+  const handleDecrement = () => {
     dispatch(updateCounter(-counterStep))
   }
 
-  const increment = () => {
+  const handleIncrement = () => {
     dispatch(updateCounter(counterStep))
   }
 
   return (
     <div className="App">
       <h1 className={style.title}>{count}</h1>
-      <button type="button" onClick={decrement}>
+      <button type="button" onClick={handleDecrement}>
         -
       </button>
-      <button type="button" onClick={increment}>
+      <button type="button" onClick={handleIncrement}>
         +
       </button>
     </div>
