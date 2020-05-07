@@ -17,6 +17,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
@@ -25,5 +27,8 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "src/**/*.spec.*"
   ]
 }

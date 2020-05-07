@@ -17,7 +17,9 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "redux-observable": "^1.2.0",
-    "rxjs": "^6.5.5"
+    "rxjs": "^6.5.5",
+    "tslib": "^1.11.2",
+    "utility-types": "^3.10.0"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
