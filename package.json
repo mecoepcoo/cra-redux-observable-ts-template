@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "node scripts/start.js --env=dev",
     "build": "node scripts/build.js",
+    "analyze": "node scripts/build.js --report=true",
     "test": "node scripts/test.js"
   },
   "dependencies": {
     "@loadable/component": "^5.12.0",
     "axios": "^0.19.2",
+    "lodash-es": "^4.17.15",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
@@ -95,6 +97,7 @@
     "typescript": "^3.7.5",
     "url-loader": "2.3.0",
     "webpack": "4.42.0",
+    "webpack-bundle-analyzer": "^3.7.0",
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1",
