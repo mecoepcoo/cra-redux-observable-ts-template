@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-04-12 20:37:20
- * @LastEditTime: 2020-04-12 21:02:26
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \cra-redux-observable-ts-template\src\router\router.ts
- */
 import loadable from '@loadable/component'
 import { RouteInterface } from '@/types/route'
 
@@ -21,6 +13,13 @@ export const routes: RouteInterface[] = [
     component: loadable(() => import('@/pages/demo/HelloWorldDemo/HelloWorldDemoPage')),
     name: 'home',
     title: 'react-home',
+  },
+  {
+    path: '/login',
+    component: loadable(() => import('@/components/Login/Inner/index')),
+    exact: true,
+    name: 'login',
+    title: '登录',
   },
   {
     path: '/home',
