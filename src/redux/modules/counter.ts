@@ -14,7 +14,7 @@ export interface IUpdateComplete {
   type: UPDATE_COMPLETE
   payload: number
 }
-export type ModifyAction = IUpdateCounter | IUpdateComplete
+export type CounterAction = IUpdateCounter | IUpdateComplete
 
 // reducer
 const initialState = {
@@ -25,7 +25,7 @@ export interface ICounterState {
   readonly count: number
 }
 
-export function counter(state = initialState, action: ModifyAction): ICounterState {
+export function counter(state = initialState, action: CounterAction): ICounterState {
   switch (action.type) {
     case UPDATE_COUNTER:
       return state
