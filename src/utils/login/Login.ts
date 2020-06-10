@@ -14,7 +14,7 @@ class LoginAssistant {
 
   login(options?: TLoginOptions) {
     if (this._mode === null) {
-      // eslint-disable-next-line quotes
+      // eslint-disable-next-line quotes, no-console
       console.warn("You need use 'setLoginMode()' before call 'login()'")
     } else {
       this._mode.login(options)

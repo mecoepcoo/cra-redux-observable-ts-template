@@ -15,7 +15,7 @@ const http = {
    * @param data - Params Object
    * @param extend - 附加配置选项
    */
-  get: function (url: string, data: AxiosRequestConfig['params'] = {}, extend: ExtendConfig) {
+  get(url: string, data: AxiosRequestConfig['params'] = {}, extend: ExtendConfig) {
     return instance.get(url, {
       params: data,
       ...extend,
@@ -28,7 +28,7 @@ const http = {
    * @param data - Request Body
    * @param extend - 附加配置选项
    */
-  post: function (url: string, data: AxiosRequestConfig['params'] = {}, extend: ExtendConfig) {
+  post(url: string, data: AxiosRequestConfig['params'] = {}, extend: ExtendConfig) {
     return instance.post(
       url,
       {
@@ -46,7 +46,7 @@ const http = {
    * @param data - Request Body
    * @param extend - 附加配置选项
    */
-  put: function (url: string, data: AxiosRequestConfig['params'] = {}, extend: ExtendConfig) {
+  put(url: string, data: AxiosRequestConfig['params'] = {}, extend: ExtendConfig) {
     return instance.put(
       url,
       {
@@ -63,7 +63,7 @@ const http = {
    * @param url - 请求地址
    * @param extend - 附加配置选项
    */
-  delete: function (url: string, extend: ExtendConfig) {
+  delete(url: string, extend: ExtendConfig) {
     return instance.delete(url, {
       ...extend,
     })

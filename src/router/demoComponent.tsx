@@ -2,9 +2,9 @@
 import React from 'react'
 import { RenderRoutes } from '@/router/RenderRoutes'
 
-import { routeProps } from '@/types/route'
+import { RouteProps } from '@/types/route'
 
-export const RouteDemoA = (routeProps: routeProps) => {
+export const RouteDemoA = (routeProps: RouteProps) => {
   const { routes } = routeProps
   console.log(routeProps)
   const authed = false
@@ -16,6 +16,6 @@ export const RouteDemoA = (routeProps: routeProps) => {
   ) : null
 }
 
-export const RouteDemoB = (props: routeProps) => {
+export const RouteDemoB = (props: RouteProps) => {
   return <h1>B</h1>
 }

@@ -5,6 +5,7 @@ module.exports = {
   "singleQuote": true,
   "semi": false,
   "trailingComma": "es5", //是否使用尾逗号，有三个可选值"<none|es5|all>"
+  "proseWrap": "never",
   "bracketSpacing": true, //对象大括号之间是否有空格，默认为true，效果：{ foo: bar }
   "endOfLine": "auto",
   "arrowParens": "always"
